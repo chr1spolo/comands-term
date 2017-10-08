@@ -1,0 +1,46 @@
+¿Qué es la terminal o CLI (command line interface) ?
+
+La terminal nos abre un mundo de posibilidades increíbles. Desde tener una navegación avanzada entre todos nuestros nodos y archivos, hasta contar con programas previamente instalados e increíbles que solo pueden ser ejecutados desde este entorno y ni siquiera sabemos que existen.
+
+Sí, todo carece de una interfaz gráfica que lo hace ver un poco “feo”, pero, todo, todos los recursos se enfocan a la ejecución del programa, obteniendo resultados increíblemente rápidos.
+
+¿Qué es lo que necesitamos?
+
+Windows: Si tienes Windows 10, puedes usar bash shell de Ubuntu directamente.
+
+Podemos utilizar http://cmder.net/ o https://www.cygwin.com/ para obtener resultados similares.
+
+Mac: Buscar en tus aplicaciones “Terminal” o descargar iTerm2
+
+Linux: Dependiendo de tu distribución, es donde encontrarás la(s) terminal(es), y como usuario de Linux seguro la encontraras de inmediato.
+
+Nota: Esto no es aprender a Hackear, quizás en un futuro, aprendamos algo de seguridad informática.
+
+arbol de nodos: directorios y archivos que están en nuestro disco duro
+
+banderas: maneras de invocar comandos de una forma diferente que a veces modifican el output(salida) de dicha ejecucion pero otras veces no solo modifican el algoritmo que utilizan para hacer lo que queremos si no la forma de calcular algunas cosas.
+es un parametro u opcion que se le pasa al comando para cambiar su comportamiento
+
+¿Qué es la terminal o CLI (Command line interface)?
+
+Una interfaz para línea de comandos hacia el sistema operativo.
+
+Sirve para invocar programas en nuestras computadoras.
+
+La terminal permite que todo el procesamiento de la computadora se vaya exclusivamente a ejecutar los programas que queramos.
+
+Arbol de nodos: Nuestros directorios y archivos que están en el disco duro.
+
+Ejecutar un proceso en la terminal suele ser muchísimo más rápido por la interfaz gráfica que es más sencilla.
+
+Todos los comandos que utilizaremos reciben banderas. O sea, la manera de invocar ciertas acciones con los comandos.
+
+Antes los sistemas operativos no tenían ningún sistema gráfico y todo se hacía en la terminal. Por eso la famosa imagen de la terminal en negro y las letras en color verde. Esto es porque los monitores era de fósforo.
+
+En la actualidad puedes personalizar la terminal a tu gusto.
+
+pwd -> Print Work Directory
+
+ls      -> List
+
+cd     -> Change Directory

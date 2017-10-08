@@ -1,0 +1,48 @@
+Creación de directorios, mover, copiar y renombrar archivos
+mkdir “nombre” : Crea un directorio, usando como nombre la palabra que pongamos después de mkdir.
+
+mv origen destino: Mueve un archivo o directorio, dando el punto de origen y de destino, por ejemplo:
+
+mv DSCF7496.jpg fotos/ ( Mueve el archivo DSCF7496.jpg a la carpera fotos/ )
+
+Nota: No olvides el alcance que tenemos en los directorios. Por ejemplo, si estamos en fotos/ y queremos mover otra foto del directorio anterior:
+
+mv ../DSCF7498.jpg ./ ( Mueve el archivo DSCF7498.jpg que está en la carpeta padre a esta carpeta hijo )
+
+Además, de tener atajos para mover más archivos de rutas más específicas:
+
+mv ~/Downloads/*jpg . (Todos los archivos jpg en el directorio Downloads, muévelos al directorio donde me encuentro actualmente )
+
+cp origen destino: Copia un archivo, dando el punto de origen y de destino, por ejemplo:
+
+cp ../foto.jpg . ( Copia el archivo foto.jpg de la carpeta padre a la ruta donde nos encontramos )
+
+Para renombrar archivos, usamos el comando mv, pero no especificamos rutas:
+
+mv foto.jpg imagen.jpg (cambia el nombre del archivo foto.jpg a imagen.jpg)
+
+touch nombredelarchivo: Abre el archivo, pero no lo modifica. Importante para actualizar las fechas de modificación de archivos existentes.
+
+Si el archivo no existe, lo crea, por ejemplo:
+
+touch hola.txt : Crea un archivo hola.txt
+
+cp -r  (origen) (destino) : para copiar la carpeta con todo su contenido.
+
+Links (Referencias de archivos o directorios ) y eliminar elementos desde la terminal
+Los links o ligas, son apuntadores que hacen referencia a un directorio o archivo sin importar dónde es que se encuentren.
+
+Se usa el comando ln -s , teniendo en cuenta primero el archivo o la carpeta a la cuál queremos hacer referencia, seguido del simbolo que queremos asignarle:
+
+ln -s flickr_photos-csv fotos.csv
+
+Con los links, podemos hacer cualquiera de las demás operaciones vistas anteriormente: Copiar, pegar, mover.
+El siguiente comando, debes usarlo con mucho cuidado, se trata de eliminar cualquier elemento desde la terminal. Una de las diferencias que tiene con la interfaz gráfica es que no nos va a pedir verificación, borra todo de inmediato, si o si, además, no existe algo como papelera de reciclaje donde podamos recuperar los archivos eliminados.
+
+Nunca, de los nuncas uses rm -r / (Esto borrara todo en tu disco duro).
+
+Cómo si usarlo bien:
+
+rm NombreDelArchivo: Elimina el archivo indicado después de rm
+rm NombreDelDirectorio/* : Elimina todos los archivos que se encuentren dentro del directorio mencionado.
+rm -r NombreDelDirectorio: Elimina el directorio mencionado, junto todos los archivos y más directorios que se encontrarán dentro de él.
