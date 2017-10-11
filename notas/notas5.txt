@@ -1,0 +1,34 @@
+Si usamos el comando man seguido del nombre del comando del cual que queremos saber más, tenemos como resultado una documentación bastante detallada junto con todas sus banderas disponibles y ejemplos de uso. Man no depende de internet y muy útil para descubrir nuevos comandos.
+
+Monitoreo de procesos desde la terminal
+La arquitectura de un sistema operativo Linux / *Nix nos permite identificar en qué carpeta se encuentran todos esos comandos ejecutables que hemos estado usando, basta con ejecutar el comando:
+
+echo $PATH
+
+Además con which NombreDelComando, podemos obtener el directorio donde ese comando en especifico es ejecutado. Ejemplo:
+
+which cat
+
+top : Es un comando que nos permite saber, segundo a segundo, que procesos están corriendo en nuestro ordenador.
+
+PID (Process ID): es un identificador numérico que se le asigna a cada proceso que se está ejecutando en nuestro ordenador.
+
+Para saber ese PID, en nuestro proceso, agregamos un &.
+
+Teniendo ese PID, podemos matar ese proceso con el comando:
+
+kill -9 PID
+
+Volviendo a los procesos, existe una forma de identificar los procesos que se han estado ejecutando:
+
+ps -wA
+
+Les comparto la documentación de which, top y kill en Ubuntu
+
+http://manpages.ubuntu.com/manpages/xenial/en/man1/which.1.html
+
+http://manpages.ubuntu.com/manpages/xenial/en/man1/top.1.html
+
+http://manpages.ubuntu.com/manpages/xenial/en/man1/kill.1.html
+
+Les recomiendo instalen htop es un gestor de procesos como top solo que muestra la información de una manera más clara y agradable.

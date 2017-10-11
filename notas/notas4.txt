@@ -3,7 +3,7 @@ bc: Aplicación de calculadora desde terminal, podemos hacer cualquier operació
 
 open NombreDelArchivo : Dependiendo del tipo de archivo, la terminal va a elegir el programa por defecto recomendado para abrirlo, por ejemplo, si es una imagen, en Mac, lo abrirá en preview.
 
-open -a NombreDelPrograma NombreDelArchivo: Abrimos el archivo elegido con el programa que queremos. Ejemplo:
+open -a NombreDelPrograma NombreDelArchivo || xdg-open demo: Abrimos el archivo elegido con el programa que queremos. Ejemplo:
 open -a atom index.html
 
 md5 NombreDelArchivo: Nos permite crear una especie de huella digital de un archivo, usando el algoritmo md5. De hecho, no existe algún otro directorio o archivo en el mundo con el mismo md5
@@ -14,7 +14,7 @@ more NombreDelArchivo: Esto es exclusivo para archivos de texto, nos muestra tod
 
 tail NombreDelArchivo: Esto es exclusivo para archivos de texto, muestra las últimas 10 líneas de un archivo de texto. Puedes modificar el flag para aumentar el número de lineas
 
-tail -20 NombreDelArchivo
+tail -[numero de lineas] NombreDelArchivo
 
 tail -f NombreDelArchivo: -f significa forever, quiere decir que la terminal se va a quedar escuchando el archivo hasta que suceda un cambio, cuando se haga un cambio en el archivo, va a imprimir como siempre los últimos 10 resultados.
 
@@ -32,3 +32,22 @@ more, cat, tail: para archivos con texto de salida utf-8 o similares
 wc NombreDelCurso: Es un contador de líneas, palabras y caracteres en ese archivo, en ese orden.
 wc -l NombreDelCurso: Es un contador de líneas de un archivo
 wc -c NombreDelCurso: Es un contador de caracteres de un archivo
+
+un aporte el comando md5, para lo que tenga instalado ubuntu es usa del mismo modo pero agregándole sum.
+ejemplo(MD5SUM)
+
+bc Es una calculadora. Para salir quit
+Nota: Una bandera muy práctica de bc es -q, esta nos ayuda a “omitir el mensaje de bienvenida de dicha calculadora” y nos manda directamente a ejecutar operaciones
+open Abre un archivo con el programa que el sistema crea más conveniente.
+Nota: A el comando open se le puede agregar una bandera para especificar el programa que deseas para abrir el archivo, esa bandera es: -a seguido del programa, por ejemplo: open -a subl file.txt
+mb5 Muestra la huella digital de un archivo (existen mejores, claro esta)
+more Imprime una parte de un archivo (para leerlo desde la terminal). Para salir se presiona la letra q
+tail Imprime las últimas 10 líneas del archivo.
+-20 Esta bandera muestra las últimas 20 líneas (se puede imprimir el número deseado).
+-f Esta bandera mantiene activamente en modo “de escuchar” un archivo, esto sirve para desarrollar, muestra logs, etc.
+cat Es concatenación. Imprime todo el archivo, a diferencia de more es que no lo página.
+wc Cuenta el número de líneas, palabras y caracteres.
+-l Esta bandera muestra todas las líneas que tiene.
+-w Esta bandera muestra todas las palabras que tiene.
+-c Esta bandera muestra todos los caracteres que tiene.
+Si necesitas una guía rápida de todos los comandos que se verán en el curso (incluso estos) aquí la tienes.
