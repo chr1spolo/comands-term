@@ -32,3 +32,57 @@ http://manpages.ubuntu.com/manpages/xenial/en/man1/top.1.html
 http://manpages.ubuntu.com/manpages/xenial/en/man1/kill.1.html
 
 Les recomiendo instalen htop es un gestor de procesos como top solo que muestra la información de una manera más clara y agradable.
+
+Diferentes formas de usar comandos:
+
+Directamente: no se sabe que hace pero se ejecuta, en caso de algun comando que realice acciones, comandos como bc(basic calculator), directamente abre una calculadora
+
+Con baderas: si lleva un guion, es una bandera, si no lleva despues del espacio, es una bandera prendida, si lleva doble guion es una bandera entera y no una abreviacion como la que se usa con un solo guion por estandar se usa doble guion y en vez de espacio, igual ( = )
+
+con parametros: directorios, archivos, etc; con su respectiva extension en caso de algun archivo.
+
+con banderas y parametros.
+
+Standard Input, Standard Output y Standard Error
+Independiente del lenguaje, cualquier programa tiene un flujo de entrada de datos, un flujo de salida y un modo de capturar errores.
+
+En la terminal, podemos tener este mismo flujo de datos gracias a “<” y “>”.
+
+Nuestro ejemplo fue:
+
+bc -q < operaciones.bc > resultado
+
+De un archivo llamado operaciones.bc, abrelo usando bc, y el resultado, mandalo a resultado
+
+STDIN = 0
+STDOUT = 1
+STDERR = 2
+
+“| pipe” = Manda el STDOUT o el resultado a otro comando o programa:
+cat operaciones.bc | bc -q
+
+“> mayor que” = Imprime el STDOUT a un archivo
+operaciones.bc > resultados.txt
+
+“< menor que” = Lo mismo que el pipe, pero sin necesidad de ejecutar otro comando
+bc -q < operaciones.bc
+
+Excelente, muy útil! Muchas Gracias @beco
+
+Mi resumen, con otro ejemplo similar, tal vez más sencillo:
+
+Creamos un archivo por ejemplo suma.txt que contiene 1 sola linea que dice 5+5
+
+Entonces si leemos con cat el archivo suma.txt escribiendo cat suma.txt nos muestra en la salida o StandarOutput: 5+5
+
+Así que si escribimos cat suma.txt | bc le estamos pasamos esa salida de cat como entrada o StandardInput a bc (la calculadora) ésta procesa la operación y nos muestra como salida final 10 (obviamente el resultado de la suma)
+
+Finalmente si escribimos cat suma.txt | bc > resultado.txt nos guardará el resultado de la suma (la Salida de bc) en resultado.txt
+
+Lo mismo de arriba lo podemos hacer con: bc < suma.txt que es como meter o pasar la salida de suma.txt a bc
+
+Y escribiendo bc < suma.txt > resultado.txt agregamos la funcionalidad de guardar la salida de bc en el archivo resultado.txt (Osea 10)
+
+Con esto básicamente estamos manipulando/controlando las entradas y salidas de procesos o programas desde la terminal! Which is awesome! 😄
+
+echo $?: imprimirá el error status del anterior proceso, si devuelve 0 fue ejecutado correctamente
